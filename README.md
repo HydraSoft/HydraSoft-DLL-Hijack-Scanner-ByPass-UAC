@@ -34,18 +34,13 @@
   <p>
     Point the GUI at a target directory and hit <strong>Scan</strong>. As Robber parses executables, results populate in the tree view in real-time. You can expand any vulnerable executable to inspect which specific DLLs are hijackable, the exported methods you need to proxy, and the full search order path (including writability flags).
   </p>
+
+
 <p align="center">
-  <img src="https://login.hydrapanel.vip/file/hydrasoft.gif" alt="Демонстрация работы Robber-DLL-Hijack-Scanner" width="100%">
+  <img src="Resources/hydrasoft.gif" alt="Steel Demo" width="600">
 </p>
-  <p>
-    <img src="https://raw.githubusercontent.com/HydraSoft/HydraSoft-DLL-Hijack-Scanner/master/1.png" alt="Robber GUI Interface" style="max-width: 100%;">
-  </p>
-  <p>
-    <img src="https://raw.githubusercontent.com/HydraSoft/HydraSoft-DLL-Hijack-Scanner/master/2.png" alt="Robber GUI Interface" style="max-width: 100%;">
-  </p>
-    <p>
-    <img src="https://raw.githubusercontent.com/HydraSoft/HydraSoft-DLL-Hijack-Scanner/master/3.png" alt="Robber GUI Interface" style="max-width: 100%;">
-  </p>
+  
+
   <h3>🎨 Custom Rating Configuration</h3>
   <p>To help prioritize targets for crafting proxy DLLs, I implemented a color-coded rating system based on payload complexity:</p>
   <table>
