@@ -190,5 +190,6 @@
   <hr>
 
   <p><em>HydraSoft — Systematically dismantling Windows execution chains.</em></p>
+<p>HydraSoft: dependency-free Windows DLL hijack scanner with centralized remote management!</p>
 
 </article>
