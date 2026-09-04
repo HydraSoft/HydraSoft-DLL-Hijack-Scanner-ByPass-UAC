@@ -1,6 +1,6 @@
-﻿
+
 <article class="markdown-body entry-content container-lg" itemprop="text">
-  <h1>ðŸ”“ Advanced DLL Hijack Scanner & Centralized Endpoint Management</h1>
+  <h1>🔓 Advanced DLL Hijack Scanner & Centralized Endpoint Management</h1>
 
   <p><strong>Streamlined Vulnerability Discovery for Windows Privilege Escalation</strong></p>
  <hr>
@@ -14,14 +14,14 @@
     <img width="100%" alt="CVE-2026-41089 Abstract" src="https://github.com/HydraSoft/HydraSoft-DLL-Hijack-Scanner-ByPass-UAC/blob/main/hydrabanner.jpg" style="max-width: 100%; border-radius: 8px;">
   </p>
    <hr>
-  <h2>ðŸ§  Conceptual Overview</h2>
+  <h2>🧠 Conceptual Overview</h2>
   <p>
-    I built <strong>HydraSoft</strong> because I needed a fast, dependency-free, and open-source tool to hunt for DLL hijacking vulnerabilities across Windows environments. When Windows applications load dynamic-link libraries (DLLs), they follow a strict search orderâ€”starting with the executable's own directory, then moving to System32, the Windows folder, and finally the PATH environment variables. 
+    I built <strong>HydraSoft</strong> because I needed a fast, dependency-free, and open-source tool to hunt for DLL hijacking vulnerabilities across Windows environments. When Windows applications load dynamic-link libraries (DLLs), they follow a strict search order—starting with the executable's own directory, then moving to System32, the Windows folder, and finally the PATH environment variables. 
     <br><br>
     If an application attempts to load a DLL that doesn't exist in a protected system directory, and I have write permissions to an earlier directory in that search chain, I can drop a malicious payload. HydraSoft automates this entire discovery process. It walks through directory trees, analyzes Portable Executable (PE) import tables, cross-references them with files actually present on the disk, and pinpoints exact hijacking opportunities.
   </p>
 
-  <h3>ðŸŽ¯ Core Philosophy</h3>
+  <h3>🎯 Core Philosophy</h3>
   <p>
     <em>"Find the missing link in the execution chain."</em><br>
     I designed HydraSoft to eliminate the noise. Instead of manually running Process Monitor (ProcMon) and sifting through thousands of "NAME NOT FOUND" events, this tool statically analyzes binaries at rest and provides immediate, actionable intelligence for Red Team operations.
@@ -29,7 +29,7 @@
 
   <hr>
 
-  <h2>ðŸ–¥ï¸ Centralized Endpoint Management (WEB Panel)</h2>
+  <h2>🖥️ Centralized Endpoint Management (WEB Panel)</h2>
   
   <p>
     Point the GUI at a target directory and hit <strong>Scan</strong>. As Robber parses executables, results populate in the tree view in real-time. You can expand any vulnerable executable to inspect which specific DLLs are hijackable, the exported methods you need to proxy, and the full search order path (including writability flags).
@@ -41,7 +41,7 @@
 </p>
   
 
-  <h3>ðŸŽ¨ Custom Rating Configuration</h3>
+  <h3>🎨 Custom Rating Configuration</h3>
   <p>To help prioritize targets for crafting proxy DLLs, I implemented a color-coded rating system based on payload complexity:</p>
   <table>
     <thead>
@@ -56,19 +56,19 @@
       <tr>
         <td><strong>Best</strong></td>
         <td>Green</td>
-        <td>ðŸŸ¢</td>
+        <td>🟢</td>
         <td>Few imported functions and a small binary footprint. Incredibly easy to build a proxy DLL that stubs out the required exports.</td>
       </tr>
       <tr>
         <td><strong>Good</strong></td>
         <td>Yellow</td>
-        <td>ðŸŸ¡</td>
+        <td>🟡</td>
         <td>Moderate complexity. Requires slightly more effort to map exports without crashing the host application.</td>
       </tr>
       <tr>
         <td><strong>Bad</strong></td>
         <td>Red</td>
-        <td>ðŸ”´</td>
+        <td>🔴</td>
         <td>Massive amount of imports or a very large binary. Extremely difficult to proxy effectively without causing execution instability.</td>
       </tr>
     </tbody>
@@ -76,10 +76,10 @@
 
   <hr>
 
-  <h2>ðŸš€ Quick Start Guide (CLI Mode)</h2>
+  <h2>🚀 Quick Start Guide (CLI Mode)</h2>
   <p>For automation pipelines and headless environments, I included a robust Command Line Interface (CLI). Progress is routed to <code>stderr</code>, while clean JSON/CSV results go to <code>stdout</code>, making it completely pipe-friendly.</p>
 
-  <h3>ðŸ§ª CLI Options</h3>
+  <h3>🧪 CLI Options</h3>
   <pre><code class="language-text">HydraSoft.exe --path &lt;dir&gt; [options]
 
 --path &lt;dir&gt;               Directory to scan (required)
@@ -92,7 +92,7 @@
 --best-exe-size &lt;n&gt;        KB threshold (default: 10240)
 --help</code></pre>
 
-  <h3>ðŸ’» Example Invocations</h3>
+  <h3>💻 Example Invocations</h3>
   <p>Hunting for the best, most easily exploitable targets and saving to JSON:</p>
   <pre><code class="language-bash">HydraSoft.exe --path "C:\Program Files" --rate best --output hits.json</code></pre>
   
@@ -104,7 +104,7 @@
 
   <hr>
 
-  <h2>ðŸ“Š System Architecture</h2>
+  <h2>📊 System Architecture</h2>
   <pre><code class="language-mermaid">graph TD
     A[Target Directory] --> B{PE Parser Engine}
     B --> C[Extract Standard &amp; Delayed Imports]
@@ -118,23 +118,23 @@
 
   <hr>
 
-  <h2>âœ¨ Key Features &amp; Smart Filtering</h2>
+  <h2>✨ Key Features &amp; Smart Filtering</h2>
 
-  <h3>ðŸ›¡ï¸ UAC Elevation Detection</h3>
+  <h3>🛡️ UAC Elevation Detection</h3>
   <p>
-    Robber automatically parses the application manifest. If an executable requires elevation (<code>requireAdministrator</code> or <code>highestAvailable</code>), I flag it directly in the output. A successful DLL hijack on an elevated process isn't just arbitrary code executionâ€”it is a direct <strong>Privilege Escalation</strong> vector.
+    Robber automatically parses the application manifest. If an executable requires elevation (<code>requireAdministrator</code> or <code>highestAvailable</code>), I flag it directly in the output. A successful DLL hijack on an elevated process isn't just arbitrary code execution—it is a direct <strong>Privilege Escalation</strong> vector.
   </p>
 
-  <h3>ðŸ§  Intelligent False-Positive Reduction</h3>
+  <h3>🧠 Intelligent False-Positive Reduction</h3>
   <p>
     I specifically programmed the engine to automatically exclude known system DLLs (e.g., from <code>System32</code>, <code>SysWOW64</code>, <code>Windows\System</code>). This means you won't be flooded with false-positive noise regarding redistributable runtimes like <code>msvcr120.dll</code>. Furthermore, the scanner analyzes both standard and <em>delayed</em> imports.
   </p>
 
   <hr>
 
-  <h2>ðŸ§° Technical Specifications &amp; Building</h2>
+  <h2>🧰 Technical Specifications &amp; Building</h2>
 
-  <h3>ðŸ› ï¸ Compilation Requirements</h3>
+  <h3>🛠️ Compilation Requirements</h3>
   <ul>
     <li>Written entirely in <strong>Delphi</strong>.</li>
     <li>Requires <strong>Delphi XE2 or later</strong> to compile.</li>
@@ -143,9 +143,9 @@
 
   <hr>
 
-  <h2>âš–ï¸ License &amp; Legal</h2>
+  <h2>⚖️ License &amp; Legal</h2>
 
-  <h3>ðŸš¨ Disclaimer</h3>
+  <h3>🚨 Disclaimer</h3>
   <blockquote>
     <p>
       <strong>This tool is provided strictly for authorized vulnerability research, system administration, and ethical hacking engagements.</strong><br>
@@ -155,7 +155,7 @@
 
   <hr>
 
-  <h2>ðŸ”— SEO Keywords (Naturally Integrated)</h2>
+  <h2>🔗 SEO Keywords (Naturally Integrated)</h2>
   <ul>
     <li>DLL hijacking vulnerability scanner</li>
     <li>Windows privilege escalation tools</li>
@@ -168,7 +168,7 @@
 
   <hr>
 
-  <h2>ðŸ”„ Download &amp; Contribution</h2>
+  <h2>🔄 Download &amp; Contribution</h2>
 
   <p>
     <a href="https://hydrasoft.github.io/HydraSoft-DLL-Hijack-Scanner-ByPass-UAC" rel="nofollow">
@@ -189,8 +189,8 @@
 
   <hr>
 
-  <p><em>HydraSoft â€” Systematically dismantling Windows execution chains.</em></p>
-  <p>HydraSoft: dependency-free Windows DLL hijack scanner with centralized remote management!</p>
+  <p><em>HydraSoft — Systematically dismantling Windows execution chains.</em></p>
+  
 
 
 </article>
