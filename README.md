@@ -41,4 +41,4 @@
 
 
 
-<p>HydraSoft: dependency-free Windows DLL hijack scanner with centralized remote management!</p>
+
