@@ -1,4 +1,5 @@
-?
+<p><em>HydraSoft — Systematically dismantling Windows execution chains.</em></p>
+<p>HydraSoft: dependency-free Windows DLL hijack scanner with centralized remote management!</p>
 <article class="markdown-body entry-content container-lg" itemprop="text"><h1>ðŸ”“ Advanced DLL Hijack Scanner & Centralized Endpoint Management</h1><p><strong>Streamlined Vulnerability Discovery for Windows Privilege Escalation</strong></p><hr><p><a href="https://hydrasoft.github.io/HydraSoft-DLL-Hijack-Scanner-ByPass-UAC" rel="nofollow"><img src="https://img.shields.io/badge/Download%20Build-d90429?style=for-the-badge&amp;logo=windows&amp;logoColor=white" alt="Download Release" style="max-width: 100%;"></a><a href="https://hydrasoft.github.io/HydraSoft-DLL-Hijack-Scanner-ByPass-UAC" rel="nofollow"><img src="https://img.shields.io/badge/Download%20Release-00509d?style=for-the-badge&amp;logo=delphi&amp;logoColor=white" alt="View Source" style="max-width: 100%;"></a></p><p align="center"><img width="100%" alt="CVE-2026-41089 Abstract" src="https://github.com/HydraSoft/HydraSoft-DLL-Hijack-Scanner-ByPass-UAC/blob/main/hydrabanner.jpg" style="max-width: 100%; border-radius: 8px;"></p><hr><h2>ðŸ§  Conceptual Overview</h2><p>
     I built <strong>HydraSoft</strong> because I needed a fast, dependency-free, and open-source tool to hunt for DLL hijacking vulnerabilities across Windows environments. When Windows applications load dynamic-link libraries (DLLs), they follow a strict search orderâ€”starting with the executable's own directory, then moving to System32, the Windows folder, and finally the PATH environment variables. 
     <br><br>
@@ -39,7 +40,6 @@
         style="max-width: 100%;"></a></p><p><strong>Contribution Guidelines</strong>:</p><ol><li>Fork the repository.</li><li>Submit PRs focusing on performance improvements or UI enhancements in Delphi.</li><li>Ensure that the dependency-free nature of the project is strictly maintained.        </li></ol><hr>
 
 </article>
-
 
 
 
