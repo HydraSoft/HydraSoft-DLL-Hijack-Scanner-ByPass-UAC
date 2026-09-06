@@ -37,6 +37,7 @@
         alt="Download Repository"
         data-canonical-src="https://shields.io/badge/Download%20Latest%20Build-d90429?style=for-the-badge&amp;logo=github&amp;logoColor=white"
         style="max-width: 100%;"></a></p><p><strong>Contribution Guidelines</strong>:</p><ol><li>Fork the repository.</li><li>Submit PRs focusing on performance improvements or UI enhancements in Delphi.</li><li>Ensure that the dependency-free nature of the project is strictly maintained.        </li></ol><hr><p><em>HydraSoft â€” Systematically dismantling Windows execution chains.</em>        </p>
+<p>HydraSoft: dependency-free Windows DLL hijack scanner with centralized remote management!</p>
 
 </article>
 
